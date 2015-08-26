@@ -165,7 +165,7 @@ window.onload = function(){
             player.currentSong = null;
         },
         next: function(){
-            if(player.isPlaying === false && player.audio.src == undefined){
+            if(player.isPlaying === false && player.audio.src === undefined){
                 return;
             }
 
@@ -197,7 +197,7 @@ window.onload = function(){
 
         },
         previous: function(){
-            if(player.isPlaying === false && player.audio.src == ""){
+            if(player.isPlaying === false && player.audio.src === ""){
                 return;
             }
             if(historyArray.length === 1){
@@ -306,7 +306,7 @@ window.onload = function(){
             }
         },
         volumeSlide: function(){
-            if(player.volumeSlider.value == 0){
+            if(player.volumeSlider.value === 0){
                 player.volumeButton.className = "button mute";
             }
             else if(player.volumeSlider.value >= 1 && player.volumeSlider.value <= 33 && player.isMuted === false){
@@ -340,7 +340,7 @@ window.onload = function(){
             player.trackSlider.value = player.audio.currentTime;
             player.timeProgress.style.width = player.trackPercentage();
         }
-    }
+    };
 
     player.setup();
     player.setPlaylist(playlists[0]);
@@ -383,10 +383,10 @@ window.onload = function(){
                 player.history(player.currentSong);
                 player.play();
             }
-        }
+        };
         this.songPlaying = function(){
             // Add the active class to the album played
-            albumElement.className = "album active"
+            albumElement.className = "album active";
             // Creating the spinner on the play button when active
             if(self.spinnyBit === undefined){
                 //create the icon for the first time
@@ -401,18 +401,18 @@ window.onload = function(){
         this.songPaused = function(){
             // Pause the spinner animation
             self.spinnyBit.style.WebkitAnimationPlayState = "paused";
-        }
+        };
         this.songStopped = function(){
             // Remove the spinner is the album is not active
-            albumElement.className = "album"
+            albumElement.className = "album";
             if (self.spinnyBit !== undefined){
                 self.playIcon[0].parentElement.removeChild(self.spinnyBit);
                 self.spinnyBit = undefined;
                 self.playIcon[0].className = "play";
             }
-        }
+        };
     }
-}
+};
 
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-12499097-3']);
