@@ -1,0 +1,24 @@
+{
+  "name": "mkc-music",
+  "version": "1.0.0",
+  "description": "Music player created by Michael K. Clements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelkclements/MKC-Music.git"
+  },
+  "dependencies": {
+    "gulp": "*",
+    "gulp-sass": "*",
+    "browser-sync": "^2.8.2"
+  },
+  "author": "Michael K. Clements",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelkclements/MKC-Music/issues"
+  },
+  "homepage": "https://github.com/michaelkclements/MKC-Music#readme"
+}
